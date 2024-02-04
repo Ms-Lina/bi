@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body{
+            background: rgb(11, 109, 229);
+        }
+        .form{
+            max-width:500px ;
+            margin:5px auto;
+            height: 30px;
+            background:white ;
+            border-radius:3px ;
+            padding:12px ;
+            border:1px solid lightgray ;
+            text-align: center ;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: rgb(56, 115, 147);
+        }
+        .form2{
+            max-width:500px ;
+            margin:50px auto;
+            background:white ;
+            border-radius:7px ;
+            padding:12px ;
+            border:1px solid lightgray ;
+            height: 300px;
+        }
+        .ofrm3{
+            color: rgb(80, 4, 151);
+            font-size: 20px;
+            text-align: center ;
+            align-items: center;
+            -ms-grid-row-align: center;
+            justify-content: center;
+
+        }
+       .form4{
+        font-size: 15px;
+        color:rgb(55, 149, 249) ;
+       }
+       .input {
+        outline: none;
+        width:49% ;
+        border:1px solid lightgray ;
+        padding: 12px ;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+  <div class="form"> 
+    <h1 align="center"> Simple JavaScript Age Calculator </h1>
+     </div>
+    <table class="form2">
+        <thead>
+            <tr>
+                <th class="ofrm3">Age Calculator</th>
+            </tr>
+            <tbody>
+                <tr class="form4">
+                    <td>Date</td>
+                    <td>Month</td>
+                    <td>Year</td>
+                </tr>
+                <tr class="input">
+                    <td><input type="number" class="num1"></td>
+                    <td><input type="number" class="num2"></td>
+                    <td><input type="number" class="num3"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><button onclick="calculate()" >Submit</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="output"></tr>
+            </tbody>
+        </thead>
+    </table>
+<script>
+    function calculate(){
+        var num1 = document.querySelector(".num1").value;
+        var num2 = document.querySelector(".num1").value;
+        var num3 = document.querySelector(".num1").value;
+        document.querySelector("#output").innerHTML = "Your Age is " + (new Date().getFullYear() - parseInt(num3)) + " years, " + (new Date().getMonth() + 1 - parseInt(num2)) + " months, and " + (new Date().getDate() - parseInt(num1)) + " days";
+  }
+</script>
+</body>
+</html>
